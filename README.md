@@ -1,0 +1,1 @@
+Level 1 task 3I was required to create Temperature converter website ,where user will input a temperature in either Fahrenheit or Celsius and press a "convert" button. The converted temperature will then be displayed with the correct unit.
