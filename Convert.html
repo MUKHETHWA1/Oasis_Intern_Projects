@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link  href="style.css" rel="stylesheet">
+    <style>
+        /* Add your CSS styles here */
+       
+    </style>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <label class="lb" for="temperature">Enter temperature:</label>
+    <input class="tem" type="number" id="temperature" placeholder="Enter temperature" required>
+    
+    <label class="lb" for="unit">Choose unit:</label>
+    <select class="un" id="unit">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+    </select><br>
+    
+    <button onclick="convertTemperature()">Convert</button>
+    <h2>Results</h2>
+    
+    <div id="result"></div>
+
+    <script>
+        function convertTemperature() {
+            const inputTemperature = parseFloat(document.getElementById("temperature").value);
+            const selectedUnit = document.getElementById("unit").value;
+            let convertedTemperature;
+
+            if (selectedUnit === "celsius") {
+                convertedTemperature = (inputTemperature * 9/5) + 32;
+                document.getElementById("result").textContent = `Converted temperature: ${convertedTemperature.toFixed(2)}°F`;
+            } else if (selectedUnit === "fahrenheit") {
+                convertedTemperature = (inputTemperature - 32) * 5/9;
+                document.getElementById("result").textContent = `Converted temperature: ${convertedTemperature.toFixed(2)}°C`;
+            }
+        }
+    </script>
+</body>
+</html>
