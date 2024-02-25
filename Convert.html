@@ -6,11 +6,16 @@
     <title>Temperature Converter</title>
     <link  href="style.css" rel="stylesheet">
     <style>
-        /* Add your CSS styles here */
+        .middle{
+            text-align: center;
+        align-items: center;
+        justify-content: center;
+        }
        
     </style>
 </head>
 <body>
+    <div class="middle">
     <h1>Temperature Converter</h1>
     <label class="lb" for="temperature">Enter temperature:</label>
     <input class="tem" type="number" id="temperature" placeholder="Enter temperature" required>
@@ -25,7 +30,7 @@
     <h2>Results</h2>
     
     <div id="result"></div>
-
+    </div>
     <script>
         function convertTemperature() {
             const inputTemperature = parseFloat(document.getElementById("temperature").value);
